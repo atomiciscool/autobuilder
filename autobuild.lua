@@ -1,3 +1,11 @@
+local hook
+hook = hookfunction(game.HttpGet,function(self,url,...)
+    if tostring(url) == "https://raw.githubusercontent.com/StenDirt/Trash-Game/main/UI.lua" then
+        return hook(self,"https://raw.githubusercontent.com/Val1antt/scripts/main/BuildABoat/BackupLib.lua",...)
+    end
+    return hook(self,url,...)
+end)
+
 --[[
 	Boronide, v0.2.5
 --]]
